@@ -1,0 +1,21 @@
+# camd.conf —— 你自己设备的凭据。放到 /data/local/tmp/camd/camd.conf
+# 【别把填好的这个文件提交到 git】.gitignore 已经挡了 camd.conf
+#
+# 怎么抓这几个值:见 docs/04-extract-credentials.md
+# 注意:摄像头固件更新或重新注册之后,这些值会全部轮换,要重抓。
+
+# 机身编号(O-KAM/Eye4 App 里显示的那个,通常印在机身上)
+vuid=VExxxxxxxxxxxx
+
+# 内部 UID。可以用机身编号免鉴权换:
+#   curl "https://vuid.eye4.cn?vuid=<你的机身编号>"
+# 守护进程启动时也会自动刷新这个值;这里填一个当兜底(断网时用它)。
+uid=VSTxxxxxxxxxxx
+
+# 连接串(init string)。只能从 App 抓,格式 "<一长串大写字母>:vstarcam20xx"
+server=XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX:vstarcam2019
+
+# 登录账号/密码。不是 App 的云账号,是设备本地账号,从 App 抓。
+# 出厂默认常见是 admin/888888,但注册过的设备会被换成一串十六进制。
+user=admin&userId=XXXXXXXXX
+pwd=xxxxxxxxxxxxxxxxx

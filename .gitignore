@@ -1,0 +1,15 @@
+# NEVER commit real credentials
+camd.conf
+*.conf
+!*.conf.example
+*.key
+*.psk
+secrets*
+# device artifacts
+*.so
+*.jar
+*.dex
+*.mp4
+*.h264
+*.jpg
+*.log
